@@ -7,7 +7,8 @@ $(function(){
 
 		defaultModules:{
 			custom: [
-			        'no_license'
+			        'no_license',
+			        'main_py'
 			        ],
 			classic: [
                      'setup_py',
