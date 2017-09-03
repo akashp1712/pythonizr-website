@@ -29,10 +29,15 @@ $(function(){
 	var params;
 	var modules = [];
 	var stylelang = '';
+
+	// vars to hold files(string) and folders (dictionary of a single key:value(list) pair)
+	var setup_list = ['setup.py', {'sample': ['__init__.py','main.py']}, {'test': ['test_basic.py']}];
+	var config_list = [{'config': ['__init__.py','cfg.ini', 'cfg_handler.py']}];
+
 	var preModules = {
-	    'main_py': 'main.py', 'setup_py': setup_py, 'readme_rst': 'README.rst',
+	    'main_py': 'main.py', 'setup_py': setup_list, 'readme_rst': 'README.rst',
         'requirements_txt': 'requirements.txt', 'manifest_in': 'MANIFEST.in',
-        'gitignore': '.gitignore', 'config_handler': config_handler,
+        'gitignore': '.gitignore', 'config_handler': config_list,
         'argparse': 'argparse_helper.py',
         'mit_license': 'LICENSE.txt', 'apache_license': 'LICENSE.txt',
         'gnu_license': 'LICENSE.txt', 'empty_license': 'LICENSE.txt'
@@ -107,27 +112,12 @@ $(function(){
 
 	function updateTree(){
 
-        var ul=document.createElement('ul');
-        for (var i = 0, curModule; curModule = modules[i++];){
-
-            if (typeof preModules[curModule] === 'function') {
-                ul.innerHTML = ul.innerHTML + preModules[curModule]();
-            } else {
-                if (curModule in preModules) {
-                    var li=document.createElement('li');
-                    ul.appendChild(li);
-                    li.innerHTML=li.innerHTML + preModules[curModule];
-               }
-            }
-        }
-
-        var parentLI=document.createElement('li');
-        parentLI.innerHTML=parentLI.innerHTML + 'sample.zip'; // root folder
-        parentLI.appendChild(ul);
+	    var treeChildList = [];
+	    var treeChildList = getListOfRequiredFiles();
 
         var parentUL=document.createElement('ul');
         parentUL.className = "tree";
-        parentUL.appendChild(parentLI);
+        generateChildTree(parentUL, [{'sample.zip': treeChildList}])
 
         var x = document.getElementsByClassName("tree-block");
         x[0].innerHTML = '';
@@ -139,8 +129,6 @@ $(function(){
         HELPERS FOR TREE-VIEW
     **************************/
 
-    function setup_py() {
-        var setupModules = {'sample': ['__init__.py','main.py'], 'test': ['test_basic.py']};
 
         var ulTemp = document.createElement('ul');
         var liSetupFile=document.createElement('li');
