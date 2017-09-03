@@ -35,12 +35,12 @@ $(function(){
 	var config_list = [{'config': ['__init__.py','cfg.ini', 'cfg_handler.py']}];
 
 	var preModules = {
-	    'main_py': 'main.py', 'setup_py': setup_list, 'readme_rst': 'README.rst',
-        'requirements_txt': 'requirements.txt', 'manifest_in': 'MANIFEST.in',
-        'gitignore': '.gitignore', 'config_handler': config_list,
-        'argparse': 'argparse_helper.py',
-        'mit_license': 'LICENSE.txt', 'apache_license': 'LICENSE.txt',
-        'gnu_license': 'LICENSE.txt', 'empty_license': 'LICENSE.txt'
+            'main_py': 'main.py', 'setup_py': setup_list, 'readme_rst': 'README.rst',
+            'requirements_txt': 'requirements.txt', 'manifest_in': 'MANIFEST.in',
+            'gitignore': '.gitignore', 'config_handler': config_list,
+            'argparse': 'argparse_helper.py',
+            'mit_license': 'LICENSE.txt', 'apache_license': 'LICENSE.txt',
+            'gnu_license': 'LICENSE.txt', 'empty_license': 'LICENSE.txt'
         }
 
 	/**********
@@ -112,8 +112,8 @@ $(function(){
 
 	function updateTree(){
 
-	    var treeChildList = [];
-	    var treeChildList = getListOfRequiredFiles();
+        var treeChildList = [];
+        var treeChildList = getListOfRequiredFiles();
 
         var parentUL=document.createElement('ul');
         parentUL.className = "tree";
@@ -183,7 +183,6 @@ $(function(){
             }
         }
     }
-
 
 	/***********
 	   HELPERS
