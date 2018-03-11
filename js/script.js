@@ -17,7 +17,11 @@ $(function(){
                      'no_license',
                      'manifest_in',
                      'gitignore'
-                     ]
+                     ],
+            web: [
+                    'flask_single_module',
+                    'requirements_txt'
+                 ]
 		},
 		baseUrl:'http://pythonizr.com:80/builder?'
 	};
@@ -33,6 +37,7 @@ $(function(){
 	// vars to hold files(string) and folders (dictionary of a single key:value(list) pair)
 	var setup_list = ['setup.py', {'sample': ['__init__.py','main.py']}, {'test': ['test_basic.py']}];
 	var config_list = [{'config': ['__init__.py','cfg.ini', 'cfg_handler.py']}];
+	var flask_single_list = ['app.py', 'config.py'];
 
 	var preModules = {
             'main_py': 'main.py', 'setup_py': setup_list, 'readme_rst': 'README.rst',
@@ -40,7 +45,8 @@ $(function(){
             'gitignore': '.gitignore', 'config_handler': config_list,
             'argparse': 'argparse_helper.py',
             'mit_license': 'LICENSE.txt', 'apache_license': 'LICENSE.txt',
-            'gnu_license': 'LICENSE.txt', 'empty_license': 'LICENSE.txt'
+            'gnu_license': 'LICENSE.txt', 'empty_license': 'LICENSE.txt',
+            'flask_single_module': flask_single_list
         }
 
 	/**********
@@ -58,6 +64,10 @@ $(function(){
 
 	$('#preconfig-classic').click(function(){
 		fillDefaultModules('classic');
+	});
+
+	$('#preconfig-web').click(function(){
+		fillDefaultModules('web');
 	});
 
 	/*********
@@ -117,7 +127,7 @@ $(function(){
 
         var parentUL=document.createElement('ul');
         parentUL.className = "tree";
-        generateChildTree(parentUL, [{'sample.zip': treeChildList}])
+        generateChildTree(parentUL, [{'pythonizr.zip': treeChildList}])
 
         var x = document.getElementsByClassName("tree-block");
         x[0].innerHTML = '';

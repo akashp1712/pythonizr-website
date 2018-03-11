@@ -226,8 +226,6 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 	background:#888;
 }
 
-
-
 .initializr-background button,
 .initializr-background a,
 #download-section a{
@@ -243,6 +241,21 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 .initializr-background button:active{
 	background:#095256;
 }
+
+.web-background button,
+.web-background a {
+    background:#E53935;
+}
+
+.web-background button:hover,
+.web-background a:hover{
+	background:#F44336;
+}
+
+.web-background button:active{
+	background:#B71C1C;
+}
+
 
 .bootstrap-background button,
 .bootstrap-background a{
@@ -535,7 +548,7 @@ textarea{
 
 	.preconfig-container{
 		float:left;
-		width:48%;
+        width: 32%;
 		margin:0 1%;
 	}
 
@@ -664,7 +677,7 @@ textarea{
 	}
 
 	.preconfig-container{
-		width:49%;
+        width: 32%;
 		margin-right:2%;
 		margin-left:0;
 	}
