@@ -23,7 +23,7 @@ $(function(){
                     'requirements_txt'
                  ]
 		},
-		baseUrl:'http://pythonizr.com:80/builder?'
+		baseUrl:'https://pythonizr.com:80/builder?'
 	};
 	
 	/************
