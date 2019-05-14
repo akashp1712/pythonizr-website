@@ -1,4 +1,6 @@
 # pythonizr-website
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fakashp1712%2Fpythonizr-website.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fakashp1712%2Fpythonizr-website?ref=badge_shield)
+
 
 This project is used as a front-end code of https://pythonizr.com
 Most of the code have been used from the Initializr website (https://github.com/verekia/initializr-website)
@@ -46,3 +48,7 @@ Feel free to raise an issue for bug or feature request And pull request for any 
 
 
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fakashp1712%2Fpythonizr-website.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fakashp1712%2Fpythonizr-website?ref=badge_large)
