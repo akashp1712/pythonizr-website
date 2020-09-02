@@ -1,6 +1,7 @@
 ##### Important: Discontinuing the maintenance of this project as this project is included in [pythonizr](https://github.com/akashp1712/pythonizr) project from the commit: [659072b](https://github.com/akashp1712/pythonizr/commit/659072b4c5e08d1eecfd8db5ebf933d0457c453f)
 
-# pythonizr-website
+# pythonizr-website (not maintained anymore)
+
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fakashp1712%2Fpythonizr-website.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fakashp1712%2Fpythonizr-website?ref=badge_shield)
 
 
